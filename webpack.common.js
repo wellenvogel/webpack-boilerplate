@@ -29,8 +29,6 @@ module.exports = {
       ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname,'./build'),
     port: 9000
-  },
-  watch: true
+  }
 };
