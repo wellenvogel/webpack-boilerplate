@@ -33,8 +33,18 @@ module.exports = {
           {
             test: /\.css$|\.less$/,
             use:[MiniCssExtractPlugin.loader,'css-loader','less-loader']
+          },
+          {
+            test: /\.hb$|\.handlebars$/,
+            use: ['handlebars-loader']
           }
       ]
+  },
+  resolve: {
+    //https://github.com/handlebars-lang/handlebars.js/issues/1174
+    alias: {
+       handlebars: 'handlebars/dist/handlebars.min.js'
+    }
   },
   devServer: {
     port: 9000
